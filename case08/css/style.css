@@ -93,9 +93,12 @@
     border: none;
     outline: none;
 }
+.inp:focus{  
+    outline: none;
+}
 
 i .search-btn {
-    margin-top: 30px;
+    margin-top: 20px;
     width: 30px;
     height: 40px;
     text-decoration: none;
@@ -151,7 +154,7 @@ p{
 }
 
 .footer{
-    margin-top: 220px;
+    margin-top: 250px;
 }
 .foo{
     color: #777;
@@ -181,6 +184,9 @@ p{
     color:#777;
     padding: 20px;
 }
+.menu1 li a:hover{
+    text-decoration: underline;
+}
 .menu2  li{
     display: inline-block;
 }
@@ -188,4 +194,8 @@ p{
     text-decoration: none;
     padding: 20px;
     color:#777;
+}
+.menu2 li a:hover{
+    text-decoration: underline;
+    
 }
