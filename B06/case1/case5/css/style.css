@@ -12,6 +12,7 @@
     background-color: #212529;
     width: 100vw;
     position: fixed;
+    z-index: 10;
 }
 
 .logo {
@@ -90,23 +91,28 @@
     text-align: center;
 }
 .por-imgfather{
+    text-align: center;
+}
+.por-container{
     max-width: 1000px;
     display: flex;
     flex-wrap: wrap;
     margin: 20px auto;
-    justify-content: space-around;
-    
+    justify-content: space-around;  
 }
 .por-imgs{
-    padding: 15px 0;
+    width: calc(100% / 3 - 20px);
     text-align: center;
     position: relative;
     overflow: hidden;
     text-align: center;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 .por-imgfather img{
-    width: 300px;
+    width: 100%;
+    display: block;
 }
 .overplay {
     font-size: 60px;
@@ -315,4 +321,9 @@
     color: rgb(248, 246, 246);
     padding: 15px 0;
     letter-spacing: 3px;
+}
+@media (max-width: 756px){
+    .por-imgfather img{
+        width: 60px;
+    }
 }
