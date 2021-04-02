@@ -152,23 +152,27 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.content-container h3 {
+.content-container h3,
+.content-service h3{
     font-family: 'Kaushan Script', cursive;
 }
 
-.content-container h1 {
+.content-container h1,
+.content-service h1 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
 
 }
 
-.content-container .line{
+.content-container .line,
+.content-service .line{
     height: 2px;
     width: 50px;
     background-color: red;
     text-align: center;
     margin: 40px auto;
 }
+
 .container-imgs {
     max-width: 1200px;
     display: flex;
@@ -186,7 +190,7 @@
 .team-item {
     width: calc(100% / 3 - 40px);
     background-color: #95e1d3;
-    
+
 }
 
 .team-item .content {
@@ -194,11 +198,13 @@
     position: relative;
     margin-left: -20px;
 }
-.sup{
+
+.sup {
     display: flex;
     flex-direction: column;
 }
-.team-item .content > .sup{
+
+.team-item .content>.sup {
     position: absolute;
     top: 0;
     left: 0;
@@ -210,11 +216,11 @@
     background: linear-gradient(rgba(233, 73, 52, 0.8), rgba(245, 171, 33, 0.8));
     color: white;
     font-size: 16px;
-    opacity: 0;   
+    opacity: 0;
     transition: 0.4s;
 }
 
-.team-item:hover .content > .sup {
+.team-item:hover .content>.sup {
     opacity: 1;
 }
 
@@ -225,4 +231,80 @@
 .team-image {
     width: 100%;
     object-fit: cover;
+}
+
+.content-number {
+    background-color: #95e1d3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.number-container {
+    margin: 60px 80px;
+    color: #fff;
+}
+
+.number-container .number{
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+.number-container .even{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+.content-service{
+    max-width: 1200px;
+    margin: 50px auto;
+
+}
+.content-service h1,
+.content-service h3{
+    text-align: center;
+}
+.service-container{
+    display: flex;
+    flex-direction: column;
+}
+.service1{
+    border-bottom: 1px solid #b1a9a9;
+}
+.service2{
+    margin-top: 20px;
+}
+.service1,
+.service2{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding-bottom: 50px;
+}
+.photo{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 30px;
+    
+}
+.photo .oclok,
+.photo .pic,
+.photo .pc{
+    font-size: 36px;
+    margin-right: 30px;
+    margin-top: 5px;
+    color: #95e1d3;
+}
+.text h1{
+    color: #666666;
+    font-size: 16px;
+    text-align: start;
+    margin-bottom: 10px;
+}
+.text p{
+    color: #666666;
+    font-family: 'Roboto', sans-serif;
 }
