@@ -158,6 +158,7 @@
 
 .content-container h1 {
     font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
 
 }
 
@@ -193,8 +194,11 @@
     position: relative;
     margin-left: -20px;
 }
-
-.team-item .content > div{
+.sup{
+    display: flex;
+    flex-direction: column;
+}
+.team-item .content > .sup{
     position: absolute;
     top: 0;
     left: 0;
@@ -203,14 +207,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(233, 73, 52, 0.7), rgba(245, 171, 33, 0.7));
+    background: linear-gradient(rgba(233, 73, 52, 0.8), rgba(245, 171, 33, 0.8));
     color: white;
     font-size: 16px;
     opacity: 0;   
     transition: 0.4s;
 }
 
-.team-item:hover .content > div {
+.team-item:hover .content > .sup {
     opacity: 1;
 }
 
