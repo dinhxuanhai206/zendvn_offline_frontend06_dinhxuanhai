@@ -138,8 +138,7 @@
 
 .menu1-item:hover .line {
     width: calc(100%);
-    background: #95e1d3;
-    ;
+    background: red;
 }
 
 .content-container {
@@ -150,6 +149,7 @@
 
 .content-container p {
     margin: 50px 120px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .content-container h3 {
