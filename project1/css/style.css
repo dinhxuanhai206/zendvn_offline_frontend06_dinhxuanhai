@@ -147,25 +147,31 @@
     text-align: center;
 }
 
-.content-container p {
+.content-container p,
+.wedo-container p {
     margin: 50px 120px;
     font-family: 'Roboto', sans-serif;
 }
 
 .content-container h3,
-.content-service h3{
+.content-service h3,
+.wedo-container h3 {
     font-family: 'Kaushan Script', cursive;
+
 }
 
 .content-container h1,
-.content-service h1 {
+.content-service h1,
+.wedo-container h1 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
 
 }
 
 .content-container .line,
-.content-service .line{
+.content-service .line,
+.banner2 .line,
+.wedo-container .line {
     height: 2px;
     width: 50px;
     background-color: red;
@@ -247,64 +253,185 @@
     color: #fff;
 }
 
-.number-container .number{
+.number-container .number {
     font-size: 50px;
     font-family: 'Montserrat', sans-serif;
 }
-.number-container .even{
+
+.number-container .even {
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     text-transform: uppercase;
 }
-.content-service{
+
+.content-service {
     max-width: 1200px;
     margin: 50px auto;
 
 }
+
 .content-service h1,
-.content-service h3{
+.content-service h3 {
     text-align: center;
 }
-.service-container{
+
+.service-container {
     display: flex;
     flex-direction: column;
 }
-.service1{
+
+.service1 {
     border-bottom: 1px solid #b1a9a9;
 }
-.service2{
-    margin-top: 20px;
+
+.service2 {
+    padding-top: 30px;
 }
+
 .service1,
-.service2{
+.service2 {
     display: flex;
     justify-content: space-between;
-    margin-right: 30px;
-    margin-left: 30px;
+    margin: 0 30px;
     padding-bottom: 50px;
 }
-.photo{
+
+.photo {
     display: flex;
     justify-content: center;
     margin-top: 20px;
     margin-left: 30px;
-    
+
 }
+
 .photo .oclok,
 .photo .pic,
-.photo .pc{
+.photo .pc {
     font-size: 36px;
     margin-right: 30px;
     margin-top: 5px;
     color: #95e1d3;
 }
-.text h1{
+
+.text h1 {
     color: #666666;
     font-size: 16px;
     text-align: start;
     margin-bottom: 10px;
 }
-.text p{
+
+.text p {
     color: #666666;
     font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.banner2 {
+    background-image: linear-gradient(rgba(249, 249, 252, 0.7), rgba(242, 242, 253, 0.7)), url('../img/banner2.png');
+    margin-bottom: 20px;
+    background-repeat: no-repeat;
+}
+
+.banner2 h3 {
+    font-family: 'Kaushan Script', cursive;
+    padding-top: 102px;
+    text-align: center;
+}
+
+.banner2 h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ban-img {
+    text-align: center;
+    position: relative;
+}
+
+.tablet {
+    margin-top: -20px;
+    margin-right: 50px;
+}
+
+.phone {
+    position: absolute;
+    right: 380px;
+    bottom: -80px;
+}
+
+.service-wedo {
+    max-width: 1200px;
+    margin: 70px auto;
+}
+
+.wedo-container {
+    text-align: center;
+}
+.wedo-content{
+    display: flex;
+    justify-content: space-between;
+}
+.wedo-check{
+    margin-left: 30px;
+    width: 600px;
+    border: 1px solid #eee;
+}
+
+.collapse-item {
+    border: 1px solid #eee;
+    margin-bottom: 5px;
+}
+
+.collapse-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+}
+.collapse-title .pic{
+    color: #95e1d3;
+}
+.collapse-title .pic span{
+    color: #666666;
+    font-weight: 700;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.collapse-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s linear;
+}
+
+input[type="checkbox"]:checked+.collapse-content {
+    height: 80px;
+}
+
+.collapse-content>div {
+    margin: 10px;
+    height: calc(100% - 20px);
+    overflow-y: auto;
+    text-align: start;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.collapse-content>div::-webkit-scrollbar-track {
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+.collapse-content>div::-webkit-scrollbar {
+    width: 7px;
+}
+
+.collapse-content>div::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #95e1d3;
 }
