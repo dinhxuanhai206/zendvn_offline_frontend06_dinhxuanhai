@@ -144,8 +144,10 @@
     padding-bottom: 20px;
 }
 
-.menu1-item:hover .line {
+.menu1-item:hover .line{
     transition: 0.5s;
+    right: 0;
+    width: 100%;
     background: #f80303;
 }
 
@@ -226,7 +228,8 @@
     flex-direction: column;
 }
 
-.team-item .content>.sup {
+.team-item .content>.sup,
+.team-item .content>.inter {
     position: absolute;
     top: 0;
     left: 0;
@@ -242,9 +245,11 @@
     transition: 0.4s;
 }
 
-.team-item:hover .content>.sup {
+.team-item:hover .content>.sup,
+.team-item:hover .content>.inter {
     opacity: 1;
 }
+
 
 .team-item:hover .content {
     transform: translate(-10px, -10px);
@@ -549,26 +554,6 @@ input[type="checkbox"]:checked+.collapse-content {
 .inter .old:hover a {
     background-color: #f80303;
     color: #ffffff;
-}
-
-.team-item .content>.inter {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(rgba(233, 73, 52, 0.8), rgba(245, 171, 33, 0.8));
-    color: white;
-    font-size: 16px;
-    opacity: 0;
-    transition: 0.4s;
-}
-
-.team-item:hover .content>.inter {
-    opacity: 1;
 }
 
 .logo-container {
@@ -1000,4 +985,7 @@ input[type="checkbox"]:checked+.collapse-content {
     color: #333333;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+}
+@media(max-width: 768px){
+    
 }
