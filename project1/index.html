@@ -27,18 +27,46 @@
             <div class="nav">
                 <div class="logo"><a href="">MoGo</a>
                 </div>
-                <div class="menu">
-                    <ul>
-                        <li class="active"><a href="">about</a></li>
-                        <li><a href="">service</a></li>
-                        <li><a href="">work</a></li>
-                        <li><a href="">blog</a></li>
-                        <li><a href="">contact</a></li>
+                <nav class="menu">
+                    <ul class="nav__list">
+                        <li class="active"><a href="" class="nav__link">about</a></li>
+                        <li><a href="" class="nav__link">service</a></li>
+                        <li><a href="" class="nav__link">work</a></li>
+                        <li><a href="" class="nav__link">blog</a></li>
+                        <li><a href="" class="nav__link">contact</a></li>
                         <div class="GH"><i class="fas fa-cart-plus"></i></div>
                         <div class="search"><i class="fas fa-search"></i>
                         </div>
                     </ul>
+                </nav>
+                <label for="nav-input" class="nav__btn-menu"><i class="fas fa-bars"></i>
+                </label>
+                <input type="checkbox" name="" class="nav__input" id="nav-input">
+
+                <div class="mobile-GH"><a href=""><i class="fas fa-cart-plus"></i></div></a>
+                <div class="moile-search"><i class="fas fa-search"></i>
                 </div>
+
+                <nav class="nav__mobile">
+                    <label for="nav-input" class="nav__btn-close"><i class="fas fa-times"></i>
+                    </label>
+                    <ul class="nav__mobile-list">
+                        <li class="active"><a href="" class="nav__mobile-link"><i class="nav__icon fas fa-home"> </i>
+                                about</a></li>
+                        <li class="active"><a href="" class="nav__mobile-link"><i
+                                    class="nav__icon fas fa-server"></i>server</a></li>
+                        <li class="active"><a href="" class="nav__mobile-link"><i
+                                    class="nav__icon fas fa-briefcase"></i>
+                                Hotel
+                                work</a></li>
+                        <li class="active"><a href="" class="nav__mobile-link"><i
+                                    class="nav__icon fab fa-microblog"></i>blog
+                            </a></li>
+                        <li class="active"><a href="" class="nav__mobile-link"><i
+                                    class="nav__icon fas fa-phone-square-alt"></i>
+                                contact</a></li>
+                    </ul>
+                </nav>
             </div>
             <div class="header-content">
                 <h2>Creative Template</h2>
@@ -224,12 +252,8 @@
             <h1>unique design</h1>
             <div class="line"></div>
             <div class="ban-img">
-                <div class="tablet">
-                    <img src="./img/pic4.png" alt="">
-                </div>
-                <div class="phone">
-                    <img src="./img/pic5.png" alt="">
-                </div>
+                <img src="./img/pic4.png" alt="" class="tablet">
+                <img src="./img/pic5.png" alt="" class="phone">
             </div>
         </div>
 
@@ -458,7 +482,7 @@
                 </div>
                 <div class="comment-content">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni at voluptates doloribus
-                        tempore doloremque officiis ducimus ut quo fugiat!</p>
+                    </p>
                     <div class="line-au">
                         <div class="line"></div>
                         <p>Joshua Earle</p>
