@@ -13,6 +13,7 @@
     background-image: linear-gradient(rgba(248, 100, 32, 0.7), rgba(248, 163, 6, 0.7)), url('../img/banner.png');
     background-size: cover;
     position: relative;
+    background-position: center;
 }
 
 
@@ -206,7 +207,7 @@
     margin: auto;
 }
 
-.menu1-item .line {
+.menu1-item .line  {
     height: 2px;
     width: 100%;
     background: #ffffff;
