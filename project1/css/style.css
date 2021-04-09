@@ -212,6 +212,7 @@
     width: 100%;
     background: #ffffff;
     margin: 5px auto;
+    position: relative;
 }
 
 .menu1-item {
@@ -223,12 +224,16 @@
     margin-right: 20px;
     cursor: pointer;
     padding-bottom: 20px;
+    
 }
 
-.menu1-item:hover .line {
-    transition: 0.5s;
-    right: 0;
-    width: 100%;
+.menu1-item .line .line.active::before {
+    content: '';
+    width: 50px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    position: absolute;
     background: #f80303;
 }
 
@@ -285,6 +290,7 @@
     margin-left: 40px;
     cursor: pointer;
     margin-right: 20px;
+    flex-wrap: wrap;
 }
 
 .content img {
@@ -907,7 +913,6 @@ input[type="checkbox"]:checked+.collapse-content {
 
 .footer {
     background-color: #f8f8f8;
-    margin-bottom: 50px;
 }
 
 .footer-container {
@@ -1221,7 +1226,12 @@ input[type="checkbox"]:checked+.collapse-content {
         width: calc(100% / 4);
         margin-right: 20px;
     }
-
+    .team-item {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    
+    }
     .number-con {
         text-align: center;
         padding: 50px 30px;
@@ -1292,7 +1302,7 @@ input[type="checkbox"]:checked+.collapse-content {
     .con-content h3 {
         font-size: 10px;
     }
-
+    
     .con-content p {
         font-size: 10px;
     }
@@ -1302,7 +1312,12 @@ input[type="checkbox"]:checked+.collapse-content {
         display: flex;
         margin-right: 30px;
     }
-
+    .img-container{
+        justify-content: flex-start;
+    }
+    .imgs-con {
+        width: calc(100% / 2);
+    }
     .banner3 {
         background-size: cover;
         margin-bottom: 50px;
@@ -1314,7 +1329,7 @@ input[type="checkbox"]:checked+.collapse-content {
     }
 
     .blog-item {
-        width: calc(80%);
+        width: 80%;
         margin: 20px auto;
     }
 
