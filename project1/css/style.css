@@ -95,7 +95,8 @@
 
 .nav__mobile {
     position: fixed;
-    top: 0 right: 0;
+    top: 0;
+    right: 0;
     width: 200px;
     max-width: 100%;
     background-color: #fff;
@@ -133,6 +134,7 @@
     color: #666666;
     right: 10px;
     top: 10px;
+    cursor: pointer;
 }
 
 .nav__input {
@@ -577,11 +579,13 @@ input[type="checkbox"]:checked+.collapse-content {
 .chevron-left {
     margin-right: 50px;
     color: #95e1d3;
+    cursor: pointer;
 }
 
 .chevron-right {
     margin-left: 50px;
     color: #95e1d3;
+    cursor: pointer;
 }
 
 .comment {
