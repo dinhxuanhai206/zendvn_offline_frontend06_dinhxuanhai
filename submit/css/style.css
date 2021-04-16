@@ -61,7 +61,7 @@ button {
 }
 
 .card {
-    position: absolute;
+    /* position: absolute; */
     display: inline-block;
     width: 425px;
 }
@@ -133,3 +133,17 @@ button {
     color: #76768e;
 }
 
+.custom-checkbox {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .layout {
+        display: none;
+    }
+
+    .card {
+        display: block;
+        margin: auto;
+    }
+}
