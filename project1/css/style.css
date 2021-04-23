@@ -229,7 +229,7 @@
     
 }
 
-.menu1-item .line .line.active::before {
+.menu1-item .line.active::before {
     content: '';
     width: 50px;
     height: 2px;
@@ -352,6 +352,7 @@
 .content-number {
     background-color: #95e1d3;
     margin-bottom: 20px;
+    
 }
 
 .number-con {
@@ -364,8 +365,7 @@
     color: #ffffff;
     align-items: center;
 }
-
-.number-container .number {
+.number-container .number {  
     font-size: 50px;
     font-family: 'Montserrat', sans-serif;
 }
@@ -1231,9 +1231,8 @@ input[type="checkbox"]:checked+.collapse-content {
         margin-right: 20px;
     }
     .team-item {
-        width: 80%;
-        margin: 0 auto;
-        margin-bottom: 40px;
+        width: calc(100%);
+        margin: 20px auto;
     
     }
     .number-con {

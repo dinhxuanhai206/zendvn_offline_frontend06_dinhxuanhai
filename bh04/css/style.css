@@ -1,0 +1,75 @@
+:root{
+    --color-green: #3db59a;
+    --color-blue: #419eaf;
+    --color-red: #cc353e;
+    --color-gray: #6c7779;
+    --color-white: #ffffff;
+    --color-grayy: #f2f2f2;
+    --color-bluee: #415367;
+    --color-boder: #508f84;
+   
+}
+.body{
+    font-family: 'roboto';
+}
+.container{
+    padding: 20px;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+table, th{
+    border: 1px solid var(--color-bluee);
+
+}
+thead{
+    background-color: var(--color-bluee);
+    color: #fff;
+}
+th{
+    height: 50px;
+    text-align: center;
+}
+tbody{
+    background-color: aqua;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+tbody tr:nth-child(odd){
+    background-color: var(--color-grayy);
+}
+tbody tr:nth-child(even){
+    background-color: var(--color-white);
+}
+.btn-green{
+    
+    height: 25px;
+    border-radius: 10px;
+    background-color: var(--color-green);
+    color: #fff;
+    border: 1px solid var(--color-boder);
+}
+.btn-blue{
+    height: 25px;
+    border-radius: 10px;
+    background-color: var(--color-blue);
+    color: #fff;
+    border: 1px solid var(--color-boder);
+}
+input{
+    width: 50px;
+    height: 30px;
+    margin: 10px;
+    padding: 10px;
+}
+.btn-pen{
+    background-color: var(--color-green);
+}

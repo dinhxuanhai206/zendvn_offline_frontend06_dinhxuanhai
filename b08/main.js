@@ -4,6 +4,6 @@ const question = [
     'nodejs'
 ]
 function showAlert() {
-    timeoutID = setTimeout(alert, 3000, question);
+    timeoutID = setTimeout(alert, 1000, question);
 }
 

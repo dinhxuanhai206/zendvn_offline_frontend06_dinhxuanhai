@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    background-color: #eef3f9;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    width: 628px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: aqua;
+    box-shadow: 0px 2px 50px #d2d4f1;
+}
+
+.card-header {
+    padding-top: 110px;
+    padding-bottom: 80px;
+    background-color: #20225d;
+    position: relative;
+    color: #fff;
+}
+
+.card-header h1 {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.card-header .btn-close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    padding: 12px 15px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #111553;
+}
+
+.card-header .btn-close:hover {
+    background-color: #20225d;
+}
+
+.card-body {
+    padding: 70px 115px;
+    background-color: #ffffff;
+}
+
+.form-group {
+    margin-bottom: 40px;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(248, 32, 42);
+}
+
+.form-group input,
+.form-group select {
+    color: inherit;
+    width: 100%;
+    border: 0;
+    font-size: 16px;
+    border-bottom: 1px solid #d4d6f1;
+    padding: 10px 0;
+}
+
+.form-group input::placeholder {
+    color: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+}
+
+.wrapper-submit {
+    text-align: center;
+}
+
+.btn-submit {
+    border: 0;
+    background-color: #20215E;
+    padding: 25px 80px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-left: 100px;
+    box-shadow: 0px 5px 10px 0px rgba(32, 33, 94, 0.3);
+}

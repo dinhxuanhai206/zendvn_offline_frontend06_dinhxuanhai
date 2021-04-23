@@ -29,25 +29,31 @@ button {
     box-shadow: 2px 2px 40px #e4e5fa;
 
 }
-.layout{
+
+.layout {
     display: inline-block;
     margin: 20px 45px 20px 20px;
     background-image: linear-gradient(#b78fe8, #6e59ce);
     padding: 65px 65px 175px 65px;
     width: 450px;
+    vertical-align: middle;
 }
-.tick-group{
+
+.tick-group {
     margin-bottom: 45px;
     color: #fffbff;
 }
-.quick h2{
+
+.quick h2 {
     font-size: 20px;
     padding-bottom: 10px;
 }
-.quick p{
+
+.quick p {
     font-size: 14px;
 }
-.tick{
+
+.tick {
     padding: 8px 10px;
     border-radius: 50%;
     line-height: 16px;
@@ -56,14 +62,17 @@ button {
     margin-bottom: 20px;
     border: 0;
 }
-.tick:hover{
+
+.tick:hover {
     background-color: #bc8ef8;
 }
 
 .card {
-    position: absolute;
+
     display: inline-block;
     width: 425px;
+    font-size: 0;
+    vertical-align: middle;
 }
 
 .card-header {
@@ -71,7 +80,7 @@ button {
     color: rgb(12, 11, 11);
 }
 
-.card-header h1{
+.card-header h1 {
     padding-top: 100px;
     padding-left: 35px;
     font-size: 30px;
@@ -93,17 +102,18 @@ button {
     color: rgb(7, 7, 7);
 }
 
-.form-group input{
+.form-group input {
     color: inherit;
     width: 100%;
     border: 1px solid #e5e6fc;
     padding: 10px 12px;
     border-radius: 5px;
 }
-.form-group input:hover{
+
+.form-group input:hover {
     border: 1px solid #e4e5fa;
     box-shadow: 2px 2px 10px #e4e5fa;
-} 
+}
 
 .form-group input::placeholder {
     color: #76768e;
@@ -112,24 +122,30 @@ button {
 .form-group input:focus{
     outline: none;
 }
-.wrappwer{
+button{
+    outline: none;
+}
+.wrappwer {
     text-align: center;
 }
-.btn-submit{
+
+.btn-submit {
     background-color: #6e59ce;
     width: 350px;
     padding: 10px;
     margin-top: 20px;
     border-radius: 5px;
+    border: 0;
     color: #fff;
-    box-shadow: 2px 2px 10px  #e7dff0;
+    box-shadow: 2px 2px 10px #e7dff0;
 }
-.btn-submit:hover{
+
+.btn-submit:hover {
     background-color: #9344f5;
 }
-.check p{
+
+.check p {
     font-size: 14px;
     padding-bottom: 20px;
     color: #76768e;
 }
-

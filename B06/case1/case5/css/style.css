@@ -105,7 +105,6 @@
     text-align: center;
     position: relative;
     overflow: hidden;
-    text-align: center;
     margin-bottom: 10px;
     margin-left: 10px;
 }
@@ -323,7 +322,8 @@
     letter-spacing: 3px;
 }
 @media (max-width: 756px){
-    .por-imgfather img{
-        width: 60px;
+    .por-imgs{
+        width: calc(100% / 2 - 20px);
+        
     }
 }
