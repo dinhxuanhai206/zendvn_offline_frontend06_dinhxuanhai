@@ -68,7 +68,11 @@ button {
 }
 
 .card {
+<<<<<<< HEAD
 
+=======
+    /* position: absolute; */
+>>>>>>> bb63ca97417a3d8871a3376b945fc77545f70ac0
     display: inline-block;
     width: 425px;
     font-size: 0;
@@ -148,4 +152,23 @@ button{
     font-size: 14px;
     padding-bottom: 20px;
     color: #76768e;
+<<<<<<< HEAD
 }
+=======
+}
+
+.custom-checkbox {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .layout {
+        display: none;
+    }
+
+    .card {
+        display: block;
+        margin: auto;
+    }
+}
+>>>>>>> bb63ca97417a3d8871a3376b945fc77545f70ac0
