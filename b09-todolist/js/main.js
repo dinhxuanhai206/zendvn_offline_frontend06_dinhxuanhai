@@ -20,8 +20,11 @@ let btnAddTask = document.getElementById('addTask');
 let areaForm = document.getElementById('area-form');
 let areaListTask = document.getElementById('area-list-task');
 let dropDownItem = document.getElementsByClassName('dropdown-item');
+let btnSubmit = document.getElementById('btn-submit');
+let btnCancel = document.getElementById('btn-cancel');
 let inputName = document.getElementById('input-name');
 let inputLevel = document.getElementById('input-level');
+let inputId = document.getElementById('input-id');
 let search = document.getElementById('btn-search');
 let sortBy = 'name';
 let sortDir = 'asc';
@@ -54,6 +57,7 @@ showItems(items);
 btnAddTask.addEventListener('click', function () {
     let isShowForm = areaForm.classList.contains('d-none');
     toggleForm(isShowForm);
+    resetInput();
 });
 
 dropDownItem.forEach(element => {
@@ -61,6 +65,19 @@ element.addEventListener('click', function(){
     sortBy = element.getAttribute('data-sort-by');
     sortDir = element.getAttribute('data-sort-dir');
     showShortDisplay();
+
+    if ( sortBy = 'name' && sortDir == 'asc'){
+        sortNameAsc();
+    }
+    if ( sortBy = 'name' && sortDir == 'desc'){
+        sortNameDesc();
+    }
+    if ( sortBy = 'level' && sortDir == 'asc'){
+        sortLevelAsc();
+    }
+    if ( sortBy = 'level' && sortDir == 'desc'){
+        sortLevelDesc();
+    }
 });   
 });
 
@@ -71,35 +88,55 @@ document.getElementById('area-list-task').addEventListener('click', function (e)
     if (element.classList.contains('btn-delete')){
 
     let id = element.getAttribute('data-id');
-        for (let index = 0; index < items.length; index++) {
-            if(items[index].id === id) {
-                items.splice(index, 1);
-            }
-        }
-        saveStorage(items);
+        let items = deleteItem(id);
         showItems(items);
     }
-});
 
-areaForm.addEventListener('click', function (e) {
-    let event = e.target;
-    if (event.classList.contains('btn-submit')){
-        
-        addItem();
-        let showAdd = loadStorage();
-        showItems(showAdd);
-
-        inputName.value = '';
-        inputLevel.value = 0;
-
-        let isShowForm = areaForm.classList.contains('d-none');
-        toggleForm(isShowForm);
-        location.reload();
+    if (element.classList.contains('btn-edit')){
+        let id = element.getAttribute('data-id');
+        let item = getItems(id);
+        inputName.value = item.name;
+        inputLevel.value = item.level;
+        inputId.value = item.id;
+        toggleForm();
     }
 });
 
+btnSubmit.addEventListener('click', function () { 
+    if (inputName.value.trim() == '') {
+        alert('Vui long nhap task name');
+        return;
+    }
+
+    let items = [];
+    let item = {
+        id: inputId.value ? inputId.value : makeID(),
+        name: inputName.value,
+        level: Number(inputLevel.value)
+    };
+
+    if (inputId.value) {
+        items = editItem(item);
+    } else {
+        items = addItem(item);
+    }
+
+    resetInput();
+    toggleForm(false);
+    showItems(items);
+});
+btnCancel.addEventListener('click', function(){
+    toggleForm(false);
+    resetInput();
+
+})
+
+search.addEventListener('click', function() {
+    
+})
+
 // FUNCTIONS
-function toggleForm(isShow){
+function toggleForm(isShow = true){
     if (isShow) {
         areaForm.classList.remove('d-none');
         btnAddTask.classList.remove('btn-info');
@@ -124,6 +161,7 @@ function showShortDisplay(){
 }
 
 
+
 function makeID(length = 5) {
     let result = [];
     let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -133,21 +171,26 @@ function makeID(length = 5) {
     }
     return result.join('');
 }
- function addItem() {
-    let pushItems = loadStorage();
-    if(pushItems){
-        let item = {
-            id: makeID(),
-            name: inputName.value,
-            level: inputLevel.value
-        };
-        pushItems.push(item);
-        saveStorage(pushItems);
-        return pushItems;
-    }
-    else{
-        return [];
-    }
+function deleteItem(id){
+    let items = loadStorage();
+    let index = items.findIndex((element) => element.id == id);
+    items.splice(index, 1);
+    saveStorage(items);
+    return items;
+}
+function editItem(item){
+    let items = loadStorage();
+    let index = items.findIndex((element) => element.id == item.id);
+    items.splice(index, 1, item);
+    saveStorage(items);
+    return items;
+}
+ function addItem(item) {
+  
+    let items = loadStorage();
+    items.push(item);
+    saveStorage(items);
+    return items;
 };
 function loadStorage() {
     let items = JSON.parse(localStorage.getItem('TODOS_ITEMS'));
@@ -175,7 +218,7 @@ function showItems(items) {
             <td>${level}</td>
           
             <td>
-                <button class="btn btn-warning">Edit</button>
+                <button class="btn btn-warning btn-edit" data-id= "${id}">Edit</button>
                 <button class="btn btn-danger btn-delete" data-id = "${id}">Delete</button>
             </td>
         </tr>`;
@@ -183,3 +226,33 @@ function showItems(items) {
     document.getElementById('area-list-task').innerHTML = content;
 }
 
+function resetInput(){
+    inputName.value = '';
+    inputLevel.value = 0;
+    inputId.value = '';
+}
+function getItems(id) {
+    let items = loadStorage();
+    let item = items.find((element) => element.id == id);
+    return item;
+}
+
+function sortNameAsc() {
+    let sortItems = loadStorage();
+    let sortNameAsc = items.sort((a, b) => {
+    let nameA = a.name.toUpperCase();
+    let nameB = b.name.toUpperCase();
+    let comparison = 0;
+    if (nameA > nameB) {
+      comparison = 1;
+    } else if (nameA < nameB) {
+      comparison = -1;
+    }
+    return comparison;
+});
+    if (sortItems) {
+        saveStorage(sortNameAsc);
+        loadStorage();
+        showItems(sortNameAsc);
+    }
+}
