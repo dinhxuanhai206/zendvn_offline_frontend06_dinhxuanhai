@@ -40,8 +40,34 @@ $(document).ready(function() {
     })
 });
 
-// $(document).ready(function () {
-    
-//     if()
-//    $('.body-text').css('line-height', "40px");
-// });
+$(document).ready(function () {
+    $('#input').change( function() {
+        $(this).find(":selected").each(function () {
+                if($(this).val() == '1'){ 
+                    $('.body-text').css('line-height', "20px");       
+                }
+                if($(this).val() == '2'){ 
+                    $('.body-text').css('line-height', "40px");    
+                }
+                if($(this).val() == '0'){ 
+                    $('.body-text').css('line-height', "15px"); 
+                    $('.text').css('font-size', "16px");   
+                }
+         });
+      });    
+});
+$(document).ready(function () {
+    $('#input1').change( function() {
+        $(this).find(":selected").each(function () {
+                if($(this).val() == '1'){ 
+                    $('.body-text').css('text-align', "right");       
+                }
+                if($(this).val() == '2'){ 
+                    $('.body-text').css('text-align', "center");    
+                }
+                if($(this).val() == '0'){ 
+                    $('.body-text').css('text-align', "left");   
+                }
+         });
+      });    
+});
