@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.tab-wrapper{
+    width: 500px;
+    margin: 50px auto;
+    border: solid 1px #acacac;
+}
+.tab-wrapper ul{
+    overflow: hidden;
+    background: #aee655;
+    margin: 0px;
+    padding: 0px;
+}
+.tab-wrapper ul li{
+    float: left;
+    list-style: none;
+    padding: 10px 20px;
+    background: #59afe9;
+    border-radius: 10px 10px 0px 0px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.tab-wrapper ul li.active{
+    background: rgb(250, 242, 242);
+}
+.tab-wrapper ul li.active a{
+    color: rgb(73, 73, 245);
+}
+.tab-wrapper ul li a{
+    color: rgb(248, 231, 231);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.tab-content{
+    padding: 20px;
+}
+.tab-item{
+    display: none;
+}
