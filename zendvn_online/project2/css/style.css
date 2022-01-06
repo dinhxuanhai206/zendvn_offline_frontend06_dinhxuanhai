@@ -253,7 +253,12 @@
 .service-title-s,
 .client-title-s,
 .blog-title-s,
-.request-title-s{
+.request-title-s,
+.company-title-s,
+.we-do-title-s,
+.the-team-title-s,
+.question-title-s,
+.touch-title-s{
     margin-bottom: 30px;
     position: relative; 
 }
@@ -261,7 +266,12 @@
 .service-line,
 .client-line,
 .blog-line,
-.request-line{
+.request-line,
+.company-line,
+.we-do-line,
+.the-team-line,
+.question-line,
+.touch-line{
     width: 32px;
     height: 7px;
     z-index: 3;
@@ -271,7 +281,12 @@
 .service-titles,
 .client-titles,
 .blog-titles,
-.request-titles{
+.request-titles,
+.company-titles,
+.we-do-titles,
+.the-team-titles,
+.question-titles,
+.touch-titles{
     position: absolute;
     z-index: 5;
     font-size: 18px;
@@ -286,7 +301,12 @@
 .service-text,
 .client-text,
 .blog-text,
-.request-text{
+.request-text,
+.company-text,
+.we-do-text,
+.the-team-text,
+.question-text,
+.touch-text{
     font-size: 48px;
     font-family: 'Merriweather', serif;
     font-weight: bold;
@@ -294,7 +314,9 @@
    
 }
 .about-desc,
-.request-desc{
+.request-desc,
+.company-desc,
+.we-do-desc{
     font-family: 'Hind', sans-serif;
     color: #565656;
     margin-bottom: 50px;
@@ -378,7 +400,7 @@
     align-items: center;
     background: white;
     display: flex;
-    box-shadow: 0px 5px rgba(247, 245, 245, 0.7);
+    box-shadow:0 0 5px 2px rgba(20, 20, 20, 0.3);
     
 }
 .group-1{
@@ -605,7 +627,7 @@
     box-shadow: 1px 1px 1px 1px rgba(250, 242, 242, 0.5);
 }
 .blog-item:hover{
-    box-shadow: 2px 2px rgba(250, 242, 242, 0.7), -2px -2px rgba(250, 242, 242, 0.7);
+    box-shadow: 0 0 5px 2px rgba(8, 8, 8, 0.2);
 }
 .blog-item-image .img-item{
     width: 370px;
@@ -645,35 +667,47 @@
     max-width: 1920px;
     height: 620px;
     display: flex;
+    display: -ms-flexbox;
+    flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
     
 }
 .request-call{
     background: url("../image/banner.jpg");
     max-width: 960px;
     background-color: #b3b3b3;
-    flex: 50%;
-
+    flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    max-width: 50%;
 }
 .request-title-s{
     margin-top: 100px;
     color: white;
     margin-left: 135px;
+    margin-right: 135px;
 }
 .request-text{
     margin-left: 135px;
     color: antiquewhite;
+    margin-right: 135px;
 }
 .request-desc{
     margin-top: -30px;
     margin-left: 135px;
+    flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    max-width: 50%;
     max-width: 500px;
     color: white;
+    margin-right: 135px;
 }
 .request-form{
-    margin-left: 135px;
     margin-right: 135px;
+    flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    max-width: 50%;
+    margin-left: 135px;
     max-width: 690px;
-    flex-basis: 50%;
 }
 .request-form-1{
     display: flex;
@@ -688,7 +722,8 @@
     color: rgb(250, 250, 250);
 
 }
-.request-form-1 input{
+.request-form-1 input,
+.form-input input{
     border: 1px dashed rgb(255, 254, 254);
     width: 330px;
     height: 45px;
@@ -696,28 +731,35 @@
    background: none;
 
 }
-.request-form-1 .email{
+.request-form-1 .email,
+.form-input .email{
     margin-right: 30px;
 }
 .request-form-1 input::placeholder{
     padding-left: 10px;
     color: rgb(253, 251, 251);
 }
-.request-form-1 input:focus{
+.request-form-1 input:focus,
+.form-input input:focus{
     outline: none;
+}
+.request-form-btnSubmit{
+    flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    max-width: 50%;
 }
 .request-form-btnSubmit button{
     margin-left: 135px;
-    min-width: 690px;
+    padding: 0 218px;
     height: 45px;
-    flex-basis: 50%;
     border: none;
     background-color: #3143ee;
     color: white;
 }
 .request-map{
-    flex: 50%;
-    max-width: 960px;
+    flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    max-width: 50%;
 }
 .request-map img{
     max-width: 100%;
@@ -813,7 +855,8 @@
 /* services-start */
 .services-container,
 .project-grid3-container,
-.blogs-02-container{
+.blogs-02-container,
+.about-us-container{
     max-width: 1920px;
     background: black;
     height: 315px;
@@ -821,7 +864,8 @@
 }
 .services,
 .project-grid3,
-.blogs-02{
+.blogs-02,
+.about-Us{
     max-width: 1170px;
     margin: 0 auto;
     padding-top: 215px;
@@ -831,7 +875,8 @@
 }
 .services-title,
 .project-grid3-title,
-.blogs-02-title{
+.blogs-02-title,
+.about-us-title{
     font-size: 40px;
     font-weight: bold;
     color: white;
@@ -850,7 +895,8 @@
 /* services-end*/
 /* services-body-start */
 .services-body,
-.blog-02-body{
+.blog-02-body
+{
     max-width: 1170px;
     margin: 0 auto;
     display: flex;
@@ -1223,6 +1269,7 @@
 .blog-02-sale{
     max-width: 300px;
     height: 250px;
+    margin: 0 auto;
     background: #0b0f33
 }
 .blog-02-logo{
@@ -1249,3 +1296,256 @@
     text-align: center;
 }
 /* //////////////////////////// Blog 02 columns end/////////////// */
+/* /////////////////////////////About us start////////////////////// */
+
+.company-container{
+    display: flex;
+    display: -ms-flexbox;
+    max-width: 1170px;
+    margin: 0 auto;
+    flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    margin-bottom: 40px;
+}
+.company-title{
+    flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    max-width: 50%;
+}
+.company-desc{
+    margin-top: -20px;
+}
+.company-experience{
+    flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    max-width: 50%;
+}
+.skills {
+    margin-top: 125px;
+    flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    max-width: 50%;
+    margin-left: 25px;
+}
+
+.skills .skill-item {
+    margin-bottom: 30px;
+    flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.skills .skill-item h6 {
+    font-size: 10px;
+    line-height: 10px;
+}
+
+.skills .process {
+    background-color: #e3e3e3;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.skills .skill-item .process-in {
+    left: 0;
+    top: 0;
+    height: 100%;
+    position: absolute;
+    border-radius: 4px;
+}
+
+.skills .skill-item .skill-precent {
+    position: absolute;
+    right: 0;
+    top: -25px;
+}
+
+.education {
+    flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.experience {
+    flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    max-width: 50%;
+   
+}
+
+
+ .skills .skill-item .process-in {
+    background-color: #0ef877;
+}
+
+.we-do-container{
+    background: #dbd8d8;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    margin-bottom: 100px;
+}
+.we-do{
+    display: flex;
+    display: -ms-flexbox;
+    max-width: 1170px;
+    margin: 0 auto;
+    flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+
+}
+.we-do-title{
+    flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+}
+.we-do-video{
+    margin-top: 70px;
+    flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    margin-left: 12px;
+}
+.video{
+    width: 612px;
+    height: 350px;
+}
+.we-do-p{
+    margin-bottom: 40px;
+}
+.we-do-check{
+    margin-right: 30px;
+    color: #3143ee
+}
+.the-team{
+    max-width: 1170px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+.the-team-items{
+    max-width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.the-team-item{
+    padding-top: 230px;
+    padding-left: 30px;
+    color: white;
+    width: 370px;
+    height: 330px;
+    margin-bottom: 50px;
+    background: rgb(58,235,161);
+    background: linear-gradient(90deg, rgba(58,235,161,1) 0%, rgba(58,235,161,1) 0%, rgba(49,68,237,1) 100%);
+}
+.the_team-item-name{
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+.the_team-item-possion{
+    margin-bottom: 10px;
+    font-family: 'Hind', sans-serif;
+}
+.the_team-item-social .icons-f{
+    margin-right: 15px;
+}
+.the_team-item-social .icons{
+    color: white;
+    margin-right: 15px;
+}
+
+/* /////////////////////////////About us end////////////////////// */
+/* /////////////////////////////Contact start ////////////////////////// */
+.contact-banner{
+    position: relative;
+    margin-bottom: 500px;
+}
+.contact-map-img{
+   width: 100%;
+   height: 800px;
+
+}
+.contact-question{
+    max-width: 1170px;
+    display: flex;
+    display: -ms-flexbox;
+    margin: 0 auto;
+    flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    background: #8a9490;
+    top: 85%;
+    right: -193px;
+    left: -193px;
+    position: absolute;
+}
+.question-title{
+    background: rgb(253, 252, 252);
+    flex: 0 0 70%;
+    -ms-flex: 0 0 70%;
+    max-width: 70%;
+    box-shadow:0 0 5px 2px rgba(7, 7, 7, 0.3);
+    padding: 80px 40px;
+}
+.touch{
+    flex: 0 0 30%;
+    -ms-flex: 0 0 30%;
+    max-width: 30%;
+    background: #2d304d;
+    color: white;
+    padding: 80px 40px;
+}
+.contact-s{
+    border-bottom: 1px solid rgb(117, 116, 116);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.contact-s .footer-e{
+    color: rgb(219, 219, 219);
+}
+.contact-s .footer-icon{
+    color: #d3d1d1;
+}
+.form-input input{
+    color: #565656;
+    border: 1px dashed rgb(117, 117, 117);
+    margin-bottom: 30px;
+}
+.question-input{
+    display: flex;
+    display: -ms-flexbox;
+    margin: 0 auto;
+    flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+}
+.question-form-1{
+    flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    max-width: 50%;
+}
+.question-form-2{
+    flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    max-width: 50%;
+}
+.textArea{
+    height: 130px;
+    padding: 10px 20px;
+   width: 330px;
+   border: 1px dashed rgb(117, 117, 117);
+   background: none;
+}
+.textArea::placeholder{
+    color: #777575;
+}
+.textArea:focus{
+    outline: none;
+}
+.question_submit{
+    width: 330px;
+    margin-top: 23px;
+    height: 45px;
+    background-color: #031cfc;
+    border: none;
+    color: white;
+}
+/* /////////////////////////////Contact end ////////////////////////// */
